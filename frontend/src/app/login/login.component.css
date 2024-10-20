@@ -1,0 +1,52 @@
+/* Main container styling */
+.login-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f2f2f2; /* Light gray background */
+}
+
+/* Card styling */
+mat-card {
+  width: 400px; /* Set a fixed width for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Card content styling */
+mat-card-content {
+  padding: 20px; /* Add padding inside the card */
+}
+
+/* Heading styling */
+h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #333; /* Dark color for the text */
+}
+
+/* Form field styling */
+mat-form-field {
+  width: 100%; /* Make form fields full width */
+  margin-bottom: 20px; /* Space below form fields */
+}
+
+/* Input styling */
+input {
+  font-size: 16px; /* Font size for input text */
+}
+
+/* Button styling */
+button {
+  width: 100%; /* Full width button */
+  padding: 10px; /* Padding inside the button */
+  font-size: 16px; /* Font size for button text */
+}
+
+/* Mat-error styling */
+mat-error {
+  font-size: 14px; /* Font size for error messages */
+  color: #f44336; /* Red color for error messages */
+  margin-top: 5px; /* Space above error messages */
+}
