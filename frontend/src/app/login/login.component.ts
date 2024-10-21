@@ -22,8 +22,7 @@ import {Router} from '@angular/router';
     MatInput,
     MatButton,
     MatCardContent,
-    MatFormFieldModule,
-    HttpClientModule
+    MatFormFieldModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
@@ -53,7 +52,7 @@ export class LoginComponent {
       this.http.post(url, body).subscribe({
         next: (response) => {
           console.log('Response: ', response);
-          this.router.navigate(["/site"]);
+          this.router.navigate(["/userinfo", response]);
         },
         error: (error) => {
           console.error('Error: ', error);

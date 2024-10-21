@@ -1,0 +1,18 @@
+<mat-form-field appearance="fill">
+  <mat-label>Select a User</mat-label>
+  <mat-select (selectionChange)="onUserSelected($event.value)">
+    <mat-option *ngFor="let user of users; let i = index" [value]="i">
+      {{ user }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div *ngIf="selectedUser">
+  <h3>User Details</h3>
+  <p><strong>Name:</strong> {{ selectedUser.username }}</p>
+  <p hidden><strong>Password:</strong> {{ selectedUser.password }}</p>
+</div>
+
+<div *ngIf="errorMessage" class="error">
+  {{ errorMessage }}
+</div>
