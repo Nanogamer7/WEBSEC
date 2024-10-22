@@ -28,9 +28,8 @@ public class LoginApi {
                         loginData.getPassword()
                 );
         Authentication authentication = this.authenticationManager.authenticate(token);
-        SecurityContext context = SecurityContextHolder.createEmptyContext();
+        SecurityContext context = SecurityContextHolder.getContext();
         context.setAuthentication(authentication);
-        SecurityContextHolder.setContext(context);
 
         HttpSession session = request.getSession(true);
         session.setAttribute("SPRING_SECURITY_CONTEXT", context);
