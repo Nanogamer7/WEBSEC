@@ -4,6 +4,16 @@ import {MatFormField, MatLabel} from '@angular/material/form-field';
 import {MatOption, MatSelect} from '@angular/material/select';
 import {NgForOf, NgIf} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
+import {MatCard} from '@angular/material/card';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
+  MatTable
+} from '@angular/material/table';
 
 @Component({
   selector: 'app-userinfo',
@@ -14,7 +24,18 @@ import {ActivatedRoute} from '@angular/router';
     MatSelect,
     MatOption,
     NgForOf,
-    NgIf
+    NgIf,
+    MatCard,
+    MatTable,
+    MatHeaderCell,
+    MatCell,
+    MatCellDef,
+    MatHeaderCellDef,
+    MatColumnDef,
+    MatHeaderRow,
+    MatRow,
+    MatRowDef,
+    MatHeaderRowDef
   ],
   templateUrl: './userinfo.component.html',
   styleUrl: './userinfo.component.css'

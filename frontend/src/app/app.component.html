@@ -2,7 +2,8 @@
   <mat-toolbar>
     <span>SecurestApplicationEverMade TM</span>
     <span class="spacer"></span> <!-- Spacer to push the button to the right -->
-    <button id="toolbar-button-login" mat-button color="primary" routerLink="/login">Login</button>
+    <button id="toolbar-button-logout" mat-button color="primary" *ngIf="isUserInfoRoute()" routerLink="/login">Logout</button>
+    <button id="toolbar-button-login" mat-button color="primary" *ngIf="isNotUserInfoRoute()" routerLink="/login">Login</button>
   </mat-toolbar>
   <div class="content">
     <router-outlet> </router-outlet>
