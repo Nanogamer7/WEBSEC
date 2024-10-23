@@ -15,12 +15,13 @@ public class EncoderConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        String idForEncode = "sha256";
+        String idForEncode = "lowsodium";
 
         Map<String, PasswordEncoder> encoders = new HashMap<>();
 
         encoders.put("sha256", new StandardPasswordEncoder());
         encoders.put("bcrypt", new BCryptPasswordEncoder());
+        encoders.put("lowsodium", new LowSodiumPasswordEncoder());
 
         return new DelegatingPasswordEncoder(idForEncode, encoders);
     }
