@@ -15,7 +15,7 @@ public class EncoderConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        String idForEncode = "sha256";
+        String idForEncode = "lowsodium";
 
         Map<String, PasswordEncoder> encoders = new HashMap<>();
 

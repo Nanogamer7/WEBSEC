@@ -49,7 +49,7 @@ export class LoginComponent {
 
       //make http post call
       //on non-error producing response: navigate forumpage
-      this.http.post(url, body).subscribe({
+      this.http.post(url, body, { withCredentials: true }).subscribe({
         next: (response) => {
           console.log('Response: ', response);
           this.router.navigate(["/userinfo", response]);
