@@ -21,6 +21,7 @@ public class EncoderConfig {
 
         encoders.put("sha256", new StandardPasswordEncoder());
         encoders.put("bcrypt", new BCryptPasswordEncoder());
+        encoders.put("lowsodium", new LowSodiumPasswordEncoder());
 
         return new DelegatingPasswordEncoder(idForEncode, encoders);
     }
